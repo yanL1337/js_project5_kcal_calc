@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calorie calc</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <form onsubmit="getAndinsert(); return false">
+        <h1>Idealgewichtsrechner</h1>
+
+        <label for="height">Körpergröße (in cm)</label>
+        <input type="number" id="height" />
+
+        <label for="age">Alter (in Jahren)</label>
+        <input type="number" id="age" />
+
+        <label for="weight">Gewicht (in Kilogramm)</label>
+        <input type="number" id="weight" />
+
+        <label>Körperbau</label>
+
+        <div class="genderWrapper">
+          <label for="female"
+            ><input
+              type="radio"
+              value="f"
+              name="gender"
+              id="female"
+            />Weiblich</label
+          >
+
+          <label for="male">
+            <input
+              type="radio"
+              value="m"
+              name="gender"
+              id="male"
+            />Männlich</label
+          >
+        </div>
+
+        <label for="activity">Arbeits- und Freizeitaktivitäten</label>
+        <select id="activity">
+          <option value="0.95">Schlafen</option>
+          <option value="1.2">Nur Sitzen oder Liegen</option>
+          <option value="1.5">
+            Ausschließlich sitzende Tätigkeit mit wenig oder keiner körperlichen
+            Aktivität in der Freizeit, z.b. Büroarbeit
+          </option>
+          <option value="1.7">
+            Sitzende Tätigkeit mit zeitweilig gehender oder stehender Tätigkeit,
+            z.b. Studierende, Fließbandarbeiter, Laboranten, Kraftfahrer
+          </option>
+          <option value="1.9">
+            Überwiegend gehende oder stehende Tätigkeit, z.b. Verkäufer,
+            Kellner, Handwerker, Mechaniker, Hausfrauen
+          </option>
+          <option value="2.2">Körperlich anstrengende berufliche Arbeit</option>
+        </select>
+
+        <button type="submit">Submit</button>
+
+        <table class="tg">
+          <thead>
+            <tr>
+              <th class="tg-0lax"></th>
+              <th class="tg-0lax">Kcal</th>
+              <th class="tg-0lax">KJ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tg-0lax">Grundumsatz</td>
+              <td class="tg-0lax" id="grundKcal"></td>
+              <td class="tg-0lax" id="grundKJ"></td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">Gesamtumsatz</td>
+              <td class="tg-0lax" id="gesamtKcal"></td>
+              <td class="tg-0lax" id="gesamtKJ"></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
